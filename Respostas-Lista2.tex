@@ -45,48 +45,99 @@
 		\item
 
 		\begin{itemize}
-			\item O algoritmo funciona, analisando um vértice inicial, e logo após isso, parte para um dos vértices vizinhos, e assim por diante, até que um vértice a ser analisado não possua mais vizinhos. Logo após, o código volta ao vértice anterior e tenta analisar um outro vizinho desse vértice. O código continua até que todos os vértices tenham sido analisados. Podemos perceber que o código cria várias árvores de busca, chamado de floresta de busca e profundidade.
-			\item O algoritmo usa a pilha, para facilitar a volta, ou seja, quando chegamos em vértice sem mais vizinhos, o código é obrigado a voltar ao vértice pai e tendo uma pilha com todos os vértices analisados, torna tal trabalho de retorno mais rápido, já que o último dado adicionado em uma pilha “fica em cima” dos dados anteriores, sendo assim o de mais fácil acesso.
+			\item O algoritmo funciona, analisando um vértice inicial, e logo após isso, parte para um dos vértices
+			 vizinhos, e assim por diante, até que um vértice a ser analisado não possua mais vizinhos. Logo após, o código 
+			 volta ao vértice anterior e tenta analisar um outro vizinho desse vértice. O código continua até que todos os 
+			 vértices tenham sido analisados. Podemos perceber que o código cria várias árvores de busca, chamado de 
+			 floresta de busca e profundidade.
+			\item O algoritmo usa a pilha, para facilitar a volta, ou seja, quando chegamos em vértice sem mais vizinhos, o 
+			código é obrigado a voltar ao vértice pai e tendo uma pilha com todos os vértices analisados, torna tal 
+			trabalho de retorno mais rápido, já que o último dado adicionado em uma pilha “fica em cima” dos dados 
+			anteriores, sendo assim o de mais fácil acesso.
 		\end{itemize}
 		\vspace{0.4cm}
 
 		\item
 
 		\begin{itemize}
-			\item O algoritmo de Dijkstra foi baseado no algoritmo de busca em largura, porém com uma diferença que, agora, podemos usar tal algoritmo em arestas com pesos positivos, mas não para pesos negativos. \\ Ao iniciar o algoritmo, ele pressupõe valor zero ao custo mínimo do vértice 'S', que seria a raiz da busca, e infinito aos demais vértices. É então atribuído um valor qualquer aos precedente (se tratam dos vértices entre o vértice inicial e o vértice final no caminho de custo mínimo), e enquanto houver vértice aberto, o código irá analizar o vértice que possui menor peso e então fecha-lo, denominaremos tal vértice  de vértice 'K'. Porém, para todo vértice sucessor de 'K' que ainda está aberto, iremos somar os pesos dos vértices. Caso tenha uma soma menor entre vértices sucessores e o vértice 'K', essa menor soma substituirá a soma anterior, gerando um novo caminho. Ao final, teremos o caminho de custo mínimo.
-			\item  O uso a fila de prioridades para esse algoritmo é essencial, pois aquele que possui maior prioridade, ou seja, aquele vértice que comparado aos outros presentes na fila, tem um maior peso, se encontra na "frente da fila" o que possibilita uma exclusão do mesmo mais fácil e assim sucessivamente até que sobre apenas um vértice, o de menor peso.
+			\item O algoritmo de Dijkstra foi baseado no algoritmo de busca em largura, porém com uma diferença que, agora, 
+			podemos usar tal algoritmo em arestas com pesos positivos, mas não para pesos negativos. \\ Ao iniciar o 
+			algoritmo, ele pressupõe valor zero ao custo mínimo do vértice 'S', que seria a raiz da busca, e infinito aos 
+			demais vértices. É então atribuído um valor qualquer aos precedente (se tratam dos vértices entre o vértice 
+			inicial e o vértice final no caminho de custo mínimo), e enquanto houver vértice aberto, o código irá analizar o 
+			vértice que possui menor peso e então fecha-lo, denominaremos tal vértice  de vértice 'K'. Porém, para todo 
+			vértice sucessor de 'K' que ainda está aberto, iremos somar os pesos dos vértices. Caso tenha uma soma menor entre 
+			vértices sucessores e o vértice 'K', essa menor soma substituirá a soma anterior, gerando um novo caminho. Ao 
+			final, teremos o caminho de custo mínimo.
+			\item  O uso a fila de prioridades para esse algoritmo é essencial, pois aquele que possui maior prioridade, ou 
+			seja, aquele vértice que comparado aos outros presentes na fila, tem um maior peso, se encontra na "frente da 
+			fila" o que possibilita uma exclusão do mesmo mais fácil e assim sucessivamente até que sobre apenas um vértice, o 
+			de menor peso.
 		\end{itemize}
 		\vspace{0.4cm}
 
 		\item
 
 		\begin{itemize}
-			\item O meu algoritmo inicia pelo vértice "A", com isso o meu vértice é adicionado a pilha, logo após ele segue para o vértice "B", sendo esse adicionado a pilha, e então segue para o vértice "C", que continua até o "D", posteriormente o vértice "F", depois o "G" e finalmente o "H", adicionando os vértices analizados, respectivamente, na pilha. Logo após chegar no "H", não há mais vizinhos, então o "H" é retirado da pilha e voltamos ao vértice "G", que também não apresenta mais nenhum vizinho não analizado, e o código vai retornando, retirando os vértices "G", "F", "E", "D", "C", "B", da pilha nessa ordem, até chegar no vértice inicial "A" e ao retira-lo, deixando nossa pilha consequentemente vazia, nosso código para. Note que, pode existir outras maneiras de empilhar os vértices, bastava mudar a ordem da pilha para um dos nossos vizinhos ligantes alternativos. Assim o código precisaria retornar a um dos vértices pai para encontrar todos os vértices do grafo. \\ Ordem da pilha: \[ A \xRightarrow[ ]{ } B \xRightarrow[ ]{ } C \xRightarrow[ ]{ } D \xRightarrow[ ]{ } E \xRightarrow[ ]{ } F \xRightarrow[ ]{ } G \xRightarrow[ ]{ } H \]
+			\item O meu algoritmo inicia pelo vértice "A", com isso o meu vértice é adicionado a pilha, logo após ele segue 
+			para o vértice "B", sendo esse adicionado a pilha, e então segue para o vértice "C", que continua até o "D", 
+			posteriormente o vértice "F", depois o "G" e finalmente o "H", adicionando os vértices analizados, 
+			respectivamente, na pilha. Logo após chegar no "H", não há mais vizinhos, então o "H" é retirado da pilha e 
+			voltamos ao vértice "G", que também não apresenta mais nenhum vizinho não analizado, e o código vai retornando, 
+			retirando os vértices "G", "F", "E", "D", "C", "B", da pilha nessa ordem, até chegar no vértice inicial "A" e ao 
+			retira-lo, deixando nossa pilha consequentemente vazia, nosso código para. Note que, pode existir outras maneiras 
+			de empilhar os vértices, bastava mudar a ordem da pilha para um dos nossos vizinhos ligantes alternativos. Assim o 
+			código precisaria retornar a um dos vértices pai para encontrar todos os vértices do grafo. \\ Ordem da pilha: \[ A\xRightarrow[ ]{ } B \xRightarrow[ ]{ } C \xRightarrow[ ]{ } D \xRightarrow[ ]{ } E \xRightarrow[ ]{ } F \xRightarrow[ ]{ } G \xRightarrow[ ]{ } H \]
 		\end{itemize}
 		\vspace{0.4cm}
 
 		\item
 
 		\begin{itemize}
-			\item Temos que dar as ordem de forma que o usuário consiga montar seu robô. Para isso, a ordem de montagem de algumas coisas deve ser obedecida para obter o resultado final. Todavia, é possível criar blocos de peças montadas que se conectem a estrutura principal, ainda obedecendo ao objetivo final. \\ Podemos pensar na utilização de uma grafo do tipo floresta, mais ainda, uma floresta de busca em profundidade. \\ Utilizando este algoritmo, pode-se construir a estrutura principal, quando findada, voltamos aos vértices pais, construindo um a um todos os conjuntos de peças que se conectarão à estrutura principal até que não exista mais nenhuma, finalizando a montagem do robô.
+			\item Temos que dar as ordem de forma que o usuário consiga montar seu robô. Para isso, a ordem de montagem de 
+			algumas coisas deve ser obedecida para obter o resultado final. Todavia, é possível criar blocos de peças montadas 
+			que se conectem a estrutura principal, ainda obedecendo ao objetivo final. \\ Podemos pensar na utilização de uma 
+			grafo do tipo floresta, mais ainda, uma floresta de busca em profundidade. \\ Utilizando este algoritmo, pode-se 
+			construir a estrutura principal, quando findada, voltamos aos vértices pais, construindo um a um todos os 
+			conjuntos de peças que se conectarão à estrutura principal até que não exista mais nenhuma, finalizando a montagem 
+			do robô.
 		\end{itemize}
 		\vspace{0.4cm}
 
 		\item
 
 		\begin{itemize}
-			\item Temos que o conjunto de arestas do \textit{Grafo de Petersen} é: E = \{ ab, ae, ag, bc, bh, cd, ci, de, dj, ef, fh, fi, gi, gj, hj \}. \\ Usando a fórmula para o cálculo de agrupamento para um grafo não direcionado: \[ C\textit{i} = \frac{\{vw: v,w\epsilon  Na(u) E vw\textit{e} E\}}{\frac{\delta U}{2}}\] E sabendo que a parte de cima trata das arestas que conectam os vizinhos do vértice a ser analizado, e a parte de baixo se trata da quantidade dos vizinhos do vértice analizado, podemos então começar o nossos cálculos.\\ Ao analizarmos todos os vértices desse grafo, percebemos que todos possuem 3 vizinhos, porém os vizinhos não conectam entre sí, i.e., temos a seguinte fórmula \[C(V) = \frac{0}{\frac{3(3-1)}{2}}\] Resultando assim no coeficiente de agrupamento igual a zero para todos os vértices.
+			\item Temos que o conjunto de arestas do \textit{Grafo de Petersen} é: E = \{ ab, ae, ag, bc, bh, cd, ci, de, dj, 
+			ef, fh, fi, gi, gj, hj \}. \\ Usando a fórmula para o cálculo de agrupamento para um grafo não direcionado: \[ C\textit{i} = \frac{\{vw: v,w\epsilon  Na(u) E vw\textit{e} E\}}{\frac{\delta U}{2}}\] E sabendo que a parte de cima 
+			trata das arestas que conectam os vizinhos do vértice a ser analizado, e a parte de baixo se trata da quantidade 
+			dos vizinhos do vértice analizado, podemos então começar o nossos cálculos.\\ Ao analizarmos todos os vértices 
+			desse grafo, percebemos que todos possuem 3 vizinhos, porém os vizinhos não conectam entre sí, i.e., temos a 
+			seguinte fórmula \[C(V) = \frac{0}{\frac{3(3-1)}{2}}\] Resultando assim no coeficiente de agrupamento igual a zero 
+			para todos os vértices.
 			\vspace{5.0cm}
-			\item Temos que o cálculo do coeficiente de centralidade de grau de um vértice é dado pela fórmula: \[C\textit{g}(U) = \frac{\delta G(a)}{|V|-1}\] Sabendo que o nosso numerador se trata das arestas conectadas no vértice a ser analizado, e numerador se trata de todos os vértices menos o vértice que estamos observando.Fazendo os calculos para todos os vértices, percebemos que todos tem a mesma quantidade de arestas, logo, para todo V pertencente ao \textit{Grafo de Petersen}, temos: \[C\textit{g}(V) = \frac{3}{9} \Rightarrow C\textit{g}(V) = \frac{1}{3}\] 
-			\item Temos que o cálculo do coeficiente de centralidade de proximidade é dado pela fórmula: \[C\textit{p}(U) = \frac{|V|-1}{\sum\limits_{v \epsilon V /\{u\}}\delta G(u,V)}\] Sabendo que o numerador calcula a quantidade total de vértices menos o que está sendo analizado e o denominador demonstra a somatória da distância de todos os vértices até o vértice que estamos analizando. Novamente, ao resolvermos os cálculos para todos os vértices, percebemos que todos resultam no mesmo número: \[C\textit{p}(V) = \frac{9}{(3*1)+(6*2)} \Rightarrow C\textit{p}(V) = \frac{9}{15} \Rightarrow C\textit{p}(V) = \frac{3}{5}\] 
-			\item A \textit{centralidade de Betweenness} diz respeito á quantidade de informações de que um vértice tende a receber na rede. Supondo que a informação entre dois vértices sempre é transmitida pelo caminho mais curto entre eles, a \textit{centralidade de Betweenness} leva esse fato em consideração, sendo assim uma importante medida.
+			\item Temos que o cálculo do coeficiente de centralidade de grau de um vértice é dado pela fórmula: \[C\textit{g}(U) = \frac{\delta G(a)}{|V|-1}\]
+			 Sabendo que o nosso numerador se trata das arestas conectadas no vértice a ser analizado, e numerador se trata de 
+			 todos os vértices menos o vértice que estamos observando.Fazendo os calculos para todos os vértices, percebemos 
+			 que todos tem a mesma quantidade de arestas, logo, para todo V pertencente ao \textit{Grafo de Petersen}, temos:
+			  \[C\textit{g}(V) = \frac{3}{9} \Rightarrow C\textit{g}(V) = \frac{1}{3}\] 
+			\item Temos que o cálculo do coeficiente de centralidade de proximidade é dado pela fórmula: \[C\textit{p}(U) = \frac{|V|-1}{\sum\limits_{v \epsilon V /\{u\}}\delta G(u,V)}\] 
+			Sabendo que o numerador calcula a quantidade total de vértices menos o que está sendo analizado e o denominador 
+			demonstra a somatória da distância de todos os vértices até o vértice que estamos analizando. Novamente, ao 
+			resolvermos os cálculos para todos os vértices, percebemos que todos resultam no mesmo número: \[C\textit{p}(V) = \frac{9}{(3*1)+(6*2)} \Rightarrow C\textit{p}(V) = \frac{9}{15} \Rightarrow C\textit{p}(V) = \frac{3}{5}\] 
+			\item A \textit{centralidade de Betweenness} diz respeito á quantidade de informações de que um vértice tende a 
+			receber na rede. Supondo que a informação entre dois vértices sempre é transmitida pelo caminho mais curto entre 
+			eles, a \textit{centralidade de Betweenness} leva esse fato em consideração, sendo assim uma importante medida.
 		\end{itemize}
 		\vspace{0.4cm}
 
 		\item
 
 		\begin{itemize}
-			\item Podemos então utilizar o algoritmo de Dijkstra para encontrar qual a melhor logística de conexão entre duas cidades. \\ Partindo de A: \\ \{ \st{C1(15)}, C3(100); C2(40), \st {C3(20)}; \st{C4(5)}; \st{C2(13)}, C6(50); \st{C5(100)}; \st{B(20)} \} \\ Caminho A = 365 unidades \\ Ainda não fechamos o vértice C6, então também temos o caminho: \\ \{ \st{C1(15)}, C3(100); C2(40), \st{C3(20)}; \st{C4(5)}; C2(13), \st{C6(50)}; \st{B(90)} \} \\ Caminho B = 370 unidades
+			\item Podemos então utilizar o algoritmo de Dijkstra para encontrar qual a melhor logística de conexão entre duas 
+			cidades. \\ Partindo de A: \\ \{ \st{C1(15)}, C3(100); C2(40), \st {C3(20)}; \st{C4(5)}; \st{C2(13)}, C6(50); \st{
+			C5(100)}; \st{B(20)} \} \\ Caminho A = 365 unidades \\ Ainda não fechamos o vértice C6, então também temos o 
+			caminho: \\ \{ \st{C1(15)}, C3(100); C2(40), \st{C3(20)}; \st{C4(5)}; C2(13), \st{C6(50)}; \st{B(90)} \} \\ 
+			Caminho B = 370 unidades
 		\end{itemize}
 	\end{enumerate}
 \end{document}

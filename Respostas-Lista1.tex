@@ -48,9 +48,15 @@ Name - Student's number \\ \ \\
 \item
 
 \begin{itemize}
-	\item Um grafo G = (V,E) é uma estrutura composta por um conjunto V de vértices e um conjunto E de pares de vértices chamado de conjunto das arestas de G. Os grafos são uma representação visual de redes complexas, o que facilita o estudo das mesmas.
-	\item As vantagens de usar a matriz adjacente é a rápida identificação das vizinhanças do vértice a ser analizado. As desvantagens se tratam de um grande espaço a ser usado para a confecção das matrizes, além de que, por ter simetria em relação a diagonal principal, muitos dados se tornam repetidos, usando memória desnecessariamente. \\ Já a lista adjacente tem a vantagem de ocupar pouco espaço quando o grafo possui poucas arestas. Já as desvantagens são a grande dificuladade em descobrir o vizinho de um dado vértice e vão ser longas quando se possui muitos vizinhos.
-	\item Classificando as redes em quatro tipos, temos: \\ Redes sociais: Facebook, Twitter. \\ Redes de informações: Google, Bing. \\ Redes de transporte: CPTM, Uber. \\ Redes biológicas: Ser humano, ecossistema. 
+	\item Um grafo G = (V,E) é uma estrutura composta por um conjunto V de vértices e um conjunto E de pares de vértices chamado de 
+	conjunto das arestas de G. Os grafos são uma representação visual de redes complexas, o que facilita o estudo das mesmas.
+	\item As vantagens de usar a matriz adjacente é a rápida identificação das vizinhanças do vértice a ser analizado. As desvantagens 
+	se tratam de um grande espaço a ser usado para a confecção das matrizes, além de que, por ter simetria em relação a diagonal 
+	principal, muitos dados se tornam repetidos, usando memória desnecessariamente. \\ Já a lista adjacente tem a vantagem de ocupar 
+	pouco espaço quando o grafo possui poucas arestas. Já as desvantagens são a grande dificuladade em descobrir o vizinho de um dado 
+	vértice e vão ser longas quando se possui muitos vizinhos.
+	\item Classificando as redes em quatro tipos, temos: \\ Redes sociais: Facebook, Twitter. \\ Redes de informações: Google, Bing. \\
+	 Redes de transporte: CPTM, Uber. \\ Redes biológicas: Ser humano, ecossistema. 
 \end{itemize}
 \vspace{0.3cm}
 
@@ -62,7 +68,15 @@ Name - Student's number \\ \ \\
 \end{itemize}
 \vspace{0.3cm}
 
-\item Ordem: A ordem de um grafo G é a quantidade de vértices de G, denoatada por v0, isto é, vG = |V|.\\ Tamanho: O tamanho de G, denotado por eG, é a quantidade de arestas de G, isto é, eG = |E|\\ Grau de um vértice: O grau de um vértice M, denotado por dG (M), é a quantidade de arestas que incidem em M.\\ Vizinhança de um vértice: A vizinhança de um vértice se trata de todos os vértices conectados a o vértice a ser estudado por arestas.\\ Passeio: Um passeio em um grafo G = (V,E) é uma sequência alternada de vértices e arestas que começa e termina com vértices.\\ Trilha: Se não ocorre repetição de arestas em nosso passeio, ocorre o que denominamos de trilha.\\ Caminho: Caso não ocorra a repetição de vértices no passeio pelo grafo, ocorre o que denominamos de caminho.\\ Ciclo: Uma trilha fechada que também possui todos os vértices diferentes, menos os vértices iniciais e finais, é chamado de ciclo.\\ Trilha euleriana: Se trata de um trilha que passe por todas as arestas do grafo.\\ Caminho hamiltoniano: Em um grafo G é um caminho que passa por todos os vértices do grafo.\\ Ciclo hamiltoniano: É um ciclo que passa por todos os vértices de G.
+\item Ordem: A ordem de um grafo G é a quantidade de vértices de G, denoatada por v0, isto é, vG = |V|.\\ Tamanho: O tamanho de G, 
+denotado por eG, é a quantidade de arestas de G, isto é, eG = |E|\\ Grau de um vértice: O grau de um vértice M, denotado por dG (M), é 
+a quantidade de arestas que incidem em M.\\ Vizinhança de um vértice: A vizinhança de um vértice se trata de todos os vértices 
+conectados a o vértice a ser estudado por arestas.\\ Passeio: Um passeio em um grafo G = (V,E) é uma sequência alternada de vértices e 
+arestas que começa e termina com vértices.\\ Trilha: Se não ocorre repetição de arestas em nosso passeio, ocorre o que denominamos de 
+trilha.\\ Caminho: Caso não ocorra a repetição de vértices no passeio pelo grafo, ocorre o que denominamos de caminho.\\ Ciclo: Uma 
+trilha fechada que também possui todos os vértices diferentes, menos os vértices iniciais e finais, é chamado de ciclo.\\ Trilha 
+euleriana: Se trata de um trilha que passe por todas as arestas do grafo.\\ Caminho hamiltoniano: Em um grafo G é um caminho que passa 
+por todos os vértices do grafo.\\ Ciclo hamiltoniano: É um ciclo que passa por todos os vértices de G.
 \vspace{0.3cm}
 
 
@@ -72,8 +86,11 @@ Name - Student's number \\ \ \\
 	\item Ordem: Temos 10 vértices distintos, logo a ordem do grafo é 10
 	\item Tamanho: Temos 15 arestas distintas, logo o tamanho do grafo é 15
 	\item Grau de todos os vértices: a = 3, b = 3, c = 3, d = 3, e = 3, f = 3, g = 3, h = 3, i = 3, j = 3.
-	\item Conjunto dos vizinhos de cada vértice: a = (b,e,g), b = (a,c,h), c = (b,d,i), d = (c,e,j), e = (a,d,f), f = (e,h,i), g = (a,i,j), h = (b,f,j), i = (c,f,g), j = (d,g,h)
-	\item De acordo com a análises feitas, não é possível construir um caminho euleriano, pois para isso é necessário que todo vértice interno do caminho tenha que ter grau par enquanto os externos tenham um grau ímpar. No nosso grafo, todos os vértices têm grau 3, impossibilitando a execução de um caminho euleriano.
+	\item Conjunto dos vizinhos de cada vértice: a = (b,e,g), b = (a,c,h), c = (b,d,i), d = (c,e,j), e = (a,d,f), f = (e,h,i), 
+	g = (a,i,j), h = (b,f,j), i = (c,f,g), j = (d,g,h)
+	\item De acordo com a análises feitas, não é possível construir um caminho euleriano, pois para isso é necessário que todo vértice 
+	interno do caminho tenha que ter grau par enquanto os externos tenham um grau ímpar. No nosso grafo, todos os vértices têm grau 3, 
+	impossibilitando a execução de um caminho euleriano.
 	\item Não existe nenhum ciclo euleriano, pois, para iso, seria necessário que cada vértice do grafo conexo tivesse grau par.
 	\item Um caminho Hamiltoniano possível:\\\[F \xRightarrow[ ]{ } E \xRightarrow[ ]{ } D \xRightarrow[ ]{ } C \xRightarrow[ ]{ } I \xRightarrow[ ]{ } G \xRightarrow[ ]{ } A \xRightarrow[ ]{ } B \xRightarrow[ ]{ } H \xRightarrow[ ]{ } J\]
 \end{itemize}
@@ -85,13 +102,20 @@ Name - Student's number \\ \ \\
 
 \item 
 \begin{itemize}
-	\item O algoritmo funciona da seguinte forma:\\Primeiramente se elege o vértice gerador/pai,distancia = 0\\Em seguida cria-se uma filha vazia, onde se iniciará introduzindo o vértice pai\\Enquanto a fila não estiver vazia:\\ 1) Retiramos o elemento mais antigo da fila;\\ 2)Analisamos todos os vizinhos desse elemento;\\ 3) Se a distância entre esse vértice vizinho e o vértice pai for infinita(ou seja, ainda não definida, pois ainda não são convexos), agora agregamos um valor da distância do vértice que se decidiu analisar +1.\\ 4) Ao fim, adiciona-se esse elemento no fim da fila.
-	\item Pois a fila faz analogia à árvore de busca e largura, em que se tem um único caminho mínimo entre 'S' e todos os vértices do grafo que é alcançável a partir de 'S'.
+	\item O algoritmo funciona da seguinte forma:\\Primeiramente se elege o vértice gerador/pai,distancia = 0\\Em seguida cria-se uma 
+	filha vazia, onde se iniciará introduzindo o vértice pai\\Enquanto a fila não estiver vazia:\\ 1) Retiramos o elemento mais antigo 
+	da fila;\\ 2)Analisamos todos os vizinhos desse elemento;\\ 3) Se a distância entre esse vértice vizinho e o vértice pai for 
+	infinita(ou seja, ainda não definida, pois ainda não são convexos), agora agregamos um valor da distância do vértice que se 
+	decidiu analisar +1.\\ 4) Ao fim, adiciona-se esse elemento no fim da fila.
+	\item Pois a fila faz analogia à árvore de busca e largura, em que se tem um único caminho mínimo entre 'S' e todos os vértices do 
+	grafo que é alcançável a partir de 'S'.
 	\item A distância entre o vértice 'A' e todos os outros vértices é de no máximo 2.
 \end{itemize}
 \vspace{0.3cm}{}
 {}
-\item Para isto seria necessário realizar um algoritmo de busca em largura tendo o Ponto A como vértice pai/gerador esse algoritmo seria executado até o encontro do vértice destino 'B'. A menor quantidade de conexões entre vôos será dado pela distância de 'B' a 'A' nessa árvore gerada.
+\item Para isto seria necessário realizar um algoritmo de busca em largura tendo o Ponto A como vértice pai/gerador esse algoritmo 
+seria executado até o encontro do vértice destino 'B'. A menor quantidade de conexões entre vôos será dado pela distância de 'B' a 'A' 
+nessa árvore gerada.
 
 
 
