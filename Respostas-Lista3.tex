@@ -1,0 +1,147 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage{pdfpages}
+\usepackage{verbatim}
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{float}
+\usepackage[a4paper,top=1cm,bottom=1.50cm,left=1.2cm,right=1.2cm]{geometry} %
+\graphicspath{ {C:/Users/carva/Desktop/imagens/} }
+\pagestyle{plain}
+\def\aux{\mathop{\text{\rm aux}}\nolimits}
+\onehalfspacing
+
+\title {Lista 3 - Comunicações e Redes}
+\author{}
+\date{}
+
+\begin{document}
+	\begin{center}
+		Comunicações e Redes - Lista 3\\
+		Luís Kenzo Takayama - 11201721937 \\ \ \\
+	\end{center}
+
+	\begin{enumerate}
+
+		\item
+
+		\vspace{0.3cm}
+
+		\begin{enumerate}
+			\item Grafos aleatórios são muito usados para provar grafos por meio de métodos probabilisticos,
+			 satisfazendo várias propriedades ou fornecendo definições rigorosas. Considere um grafo com 
+			 N vértices, completo, agora, vamos deletando as arestas do nosso grafo completo, sendo p, a 
+			 probabilidade daquela aresta não ser deletada.
+			\item Não, como as arestas possuem a mesma probabilidade de serem geradas, elas se distribuem 
+			muito bem pelo grafo a ser analisado, criando um efeito que denominamos, efeito de expansão.
+			\item Temos que $|E(G(n,p))| \approx \frac{n(n-1)p}{2}$, logo, podemos fazer: \[n (log(n)) = 
+			\frac{n(n-1)p}{2} \Rightarrow p = \frac{2 n(log(n))}{n(n-1)} \Rightarrow p = \frac{2(log(n))}{n-
+			1}\] Logo o valor do meu p, nessa situação, seria $\frac{2(log(n))}{n-1}$
+			\item Uma propriedade importante G(n,p) é a percolação, que ajuda na criação de um gráfico 
+			robusto, isto porque independente do $n \gg 1$, considerando um grau médio K. é eliminado uma 
+			fracção aleatória de 1- p' de vértices e deixa apenas uma fracção p' no nosso grafo.
+			Porém existe um limiar crítico de percolação, P'\textit{c} = $\frac{1}{k}$, abaixo do qual 
+			a rede se torna fragmentada, enquanto acima de P'\textit{c}, um componente ligado de grandes 
+			dimensões de ordem n existe.
+			\item Para que nosso grafo seja vazio, o nosso número p deve assumir valo zero, assim não
+			há nenhuma probabilidade de uma aresta ser criada em nosso vértice. Já para ser um grafo 
+			completo, o nosso p deve assumir valor 1, assim, todas as arestas possíveis tem total chance
+			de serem geradas em nosso grafo.
+		\end{enumerate}
+
+		\vspace{0.3cm}
+
+		\item
+		\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics{Resposta2L3}
+		\end{minipage}
+		
+		\vspace{0.3cm}
+
+		\item Uma propriedade que o grafo G(n,p) não satisfaz é a do "agrupamento", ou seja, a 
+		probabilidade de que, em uma rede social, por exemplo, dois conhecidos seus se conheçam, é maior do 
+		que pessoas randomicas se conheçam. Dado o número de vértices N, e sendo K o grau de cada vértice( 
+		vamos assumir como sendo um número inteiro par) e $\beta$ sendo um parâmetro especial, satisfazendo
+		$0 \leq \beta \leq 1$  $\wedge$  $N \gg K \gg ln(N) \gg 1 $, o modelo constrói um grafo com N 
+		vértices e $\frac{NK}{2}$ arestas da seguinte forma: \\ 1) É criado uma rede de anéis onde cada 
+		vértice possui grau 2K e está conectado a K vizinhos mais próximos em ambos os lados. \\ 2) Para
+		cada aresta no gráfico, reconecte o vértice de destino com probabilidade $\beta$ de tal forma que 
+		não haja uma conexão entre o vértice e ele mesmo, ou que um vértice não conecte duas vezes com um 
+		outro vértice. 
+
+		\vspace{0.3cm}
+
+		\item 
+		\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics{Resposta4L3}
+		\includegraphics{Resposta4L3-2}
+		\end{minipage}
+
+		\vspace{0.3cm}
+
+		\item Temos que, todos os vértices do grafo gerado para esse exercício tem o coeficiente de 
+		agrupamento igual, logo precisamos calcular apenas uma vez, sabendo que o vértice analisado se 
+		conecta a $\frac{2n}{3}$, sendo que cada um desses vértice se liga a todos do outro grupo de 
+		vértices, logo, temos $\frac{n^2}{9}$ arestas, logo: \[ C\textit{a} = \frac{\frac{n^2}{9}}{\frac{2n}
+		{3}(\frac{2n-3}{3})}{2} \Rightarrow \frac{n^2}{9} X \frac{9X2}{4n^2-6n} \Rightarrow C\textit{a} = 
+		\frac{n^2}{2n^2-3n} \] Temos que o coeficiente de agrupamento de um grafo obtido no passo 
+		determinístico é: $C\textit{a} = \frac{3(k-2)}{4(k-1)}$. Se tendermos os dois ao 
+		infínito, ou seja, para um número muito grande, teremos: \[\lim_{k\to\infty} \frac{3(k-2)}{4(k-1)} =
+		 \frac{3}{4}\] \[\lim_{n\to\infty} \frac{n^2}{2n^2-3n} = \frac{1}{2}\] Logo o grafo do passo 
+		 determinístico possui um coeficiente de agrupamento maior.
+
+		\vspace{1cm}
+
+		\item O modelo WS apresenta uma distribuição média característica de graus em seus vértices, porém, 
+		isso não é comumente encontrado nas redes da natureza, em que temos uma distribuição distinta 
+		(graus concentrados em alguns vértices, chamados de hub). Um modelo que grafo que trabalha com 
+		essas desigualdades é o Rede de livre escala que segue uma lei de potência. \\
+		Para a construção de um grafo de livre escala começaremos com um grafo de m0 vértices e a cada passo
+		adicionamos um novo vértice que se conecta a m vértices do grafo obtido até o passo anterior. E 
+		assumimos que a probabilidade do novo vértice se ligar com os vértices é proporcional ao grau 
+		deste, favorecendo os Hubs.
+
+		\vspace{0.3cm}
+
+
+		\item O problema inicial que podemos citar é se o grafo inicial possui arestas, pois, para um novo 
+		vértice se ligar ao nosso grafo antigo, ele possui uma probabilidade $\pi$ que está relacionado com 
+		o grau do vértice alvo, isto é, do vértice do nosso grafo inicial, porém se todos os vértices de 
+		nosso grafo possuirem grau 0, nunca haverá expansão. Outro problema é se o grau esperado do novo 
+		vértice for 1, já que uma das regras do nosso grafo de livre escala é que esse novo vértice se ligue
+		a m vértices do nosso grafo a ser analizado. 
+
+		\vspace{0.3cm}
+
+		\item  Quando m=1, isto é, adição de 1 aresta a cada passo e um vértice. O modo com a qual o 
+		vértice é posto não importa, o que nos interessa são as ligações que ele pode fazer que interfere 
+		na configuração do grafo. De forma aleatória, o vértice novo é conectado a outro vértice de acordo 
+		com a seguinte fórmula: \[P(i=s)=\frac{di(vs)}{2t-1} \rightarrow Se 1 \leq s \leq t-1\]
+		\[P(i=s) = \frac{1}{2t-1} \rightarrow Se s = t\] E assim se constrói um grafo de livre escala de 
+		Bollobás, Riordan, Spenser e Tusnády.
+
+		\vspace{0.3cm}
+
+		\item O grafo $G^t_m$ é formado de $G^t_1$, identificando os m primeiros vértices para ser v1, em 
+		seguida os m segundos vértices para ser v2 e assim por diante.
+
+		\vspace{0.3cm}
+
+		\item \begin{minipage}{\linewidth}
+		\centering
+		\includegraphics{Resposta10L3}
+		\end{minipage}
+
+	\end{enumerate}
+\end{document}
