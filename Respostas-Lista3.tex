@@ -27,7 +27,7 @@
 \begin{document}
 	\begin{center}
 		Comunicações e Redes - Lista 3\\
-		name - student´s number \\ \ \\
+		Name - Student's number \\ \ \\
 	\end{center}
 
 	\begin{enumerate}
@@ -60,11 +60,8 @@
 
 		\vspace{0.3cm}
 
-		\item
-		\begin{minipage}{\linewidth}
-		\centering
-		\includegraphics{Resposta2L3}
-		\end{minipage}
+		\item Para obter triangulações: \[ \binom{n}{3}.p = \frac{n(n-1)(n-2)}{6}p\text{Sendo p as arestas 
+		possíveis}\]
 		
 		\vspace{0.3cm}
 
@@ -79,14 +76,20 @@
 		não haja uma conexão entre o vértice e ele mesmo, ou que um vértice não conecte duas vezes com um 
 		outro vértice. 
 
-		\vspace{0.3cm}
+		\vspace{5cm}
 
-		\item 
-		\begin{minipage}{\linewidth}
-		\centering
-		\includegraphics{Resposta4L3}
-		\includegraphics{Resposta4L3-2}
-		\end{minipage}
+		\item Watts-Strogatz: 
+		\[Ca(v)=\frac{\text{Arestas entre vizinhos}}{\binom{\text{grau de v}}{2}} \] \\
+		Arestas no lado esquerdo e no lado direito :$\binom{\frac{k}{4}}{2}$.  
+		Entre o lado esquerdo e direito: \[1+2+3+...+(\frac{k}{4}-1) \Rightarrow \text{Soma de PA} \] \\ 
+		\text {Soma da PA é: } \[\frac{((\frac{k}{4}-1)+1).(\frac{k}{4}-1)}{2} = \frac{(k-4)}{4}\frac{k}{8} \]
+		\text{Voltando ao cálculo do Coeficiente de agrupamento: }\[ \frac{\frac{k}{8}(\frac{k-4}{4})+2 \
+		binom{\frac{k}{4}}{2}}{\binom{\frac{k}{2}}{2}} = \frac{\frac{k}{8}(\frac{k-4}{4}) + \frac{k}{4}(
+		\frac{k-4}{4})}{\frac{\frac{k}{2}(\frac{k-2}{2})}{2}} = \frac{\frac{k}{4}(\frac{k-4}{4}) + \frac{k}{
+		2}(\frac{k-4}{4})}{\frac{k}{2}(\frac{k-2}{2})} \] \[ \Rightarrow \frac{\frac{k-4}{8}+\frac{k-4}{4}}
+		{\frac{k-2}{2}} = \frac{3k-12}{8} \cdot \frac{2}{k-2} = \frac{3(k-12)}{4(k-2)} \]
+		
+		
 
 		\vspace{0.3cm}
 
@@ -94,9 +97,9 @@
 		agrupamento igual, logo precisamos calcular apenas uma vez, sabendo que o vértice analisado se 
 		conecta a $\frac{2n}{3}$, sendo que cada um desses vértice se liga a todos do outro grupo de 
 		vértices, logo, temos $\frac{n^2}{9}$ arestas, logo: \[ C\textit{a} = \frac{\frac{n^2}{9}}{\frac{2n}
-		{3}(\frac{2n-3}{3})}{2} \Rightarrow \frac{n^2}{9} X \frac{9X2}{4n^2-6n} \Rightarrow C\textit{a} = 
-		\frac{n^2}{2n^2-3n} \] Temos que o coeficiente de agrupamento de um grafo obtido no passo 
-		determinístico é: $C\textit{a} = \frac{3(k-2)}{4(k-1)}$. Se tendermos os dois ao 
+		{3}(\frac{2n-3}{3})}{2} \Rightarrow \frac{n^2}{9} \cdot \frac{9\cdot 2}{4n^2-6n} \Rightarrow C
+		\textit{a} = \frac{n^2}{2n^2-3n} \] Temos que o coeficiente de agrupamento de um grafo obtido no 
+		passo determinístico é: $C\textit{a} = \frac{3(k-2)}{4(k-1)}$. Se tendermos os dois ao 
 		infínito, ou seja, para um número muito grande, teremos: \[\lim_{k\to\infty} \frac{3(k-2)}{4(k-1)} =
 		 \frac{3}{4}\] \[\lim_{n\to\infty} \frac{n^2}{2n^2-3n} = \frac{1}{2}\] Logo o grafo do passo 
 		 determinístico possui um coeficiente de agrupamento maior.
@@ -122,26 +125,29 @@
 		vértice for 1, já que uma das regras do nosso grafo de livre escala é que esse novo vértice se ligue
 		a m vértices do nosso grafo a ser analizado. 
 
-		\vspace{0.3cm}
+		\vspace{2cm}
 
 		\item  Quando m=1, isto é, adição de 1 aresta a cada passo e um vértice. O modo com a qual o 
 		vértice é posto não importa, o que nos interessa são as ligações que ele pode fazer que interfere 
 		na configuração do grafo. De forma aleatória, o vértice novo é conectado a outro vértice de acordo 
-		com a seguinte fórmula: \[P(i=s)=\frac{di(vs)}{2t-1} \rightarrow Se 1 \leq s \leq t-1\]
-		\[P(i=s) = \frac{1}{2t-1} \rightarrow Se s = t\] E assim se constrói um grafo de livre escala de 
-		Bollobás, Riordan, Spenser e Tusnády.
+		com a seguinte fórmula: \[P(i=s)=\frac{di(vs)}{2t-1} \rightarrow \text{Se }1 \leq s \leq t-1\]
+		\[P(i=s) = \frac{1}{2t-1} \rightarrow \text{Se } s = t\] E assim se constrói um grafo de livre 
+		escala de Bollobás, Riordan, Spenser e Tusnády.
 
 		\vspace{0.3cm}
 
-		\item O grafo $G^t_m$ é formado de $G^t_1$, identificando os m primeiros vértices para ser v1, em 
-		seguida os m segundos vértices para ser v2 e assim por diante.
-
+		\item Grafos com m=1, iniciam-se com $G^t_1$, sendo o mesmo um grafo vazio. Em seguida, $G^1_1$ o 
+		qual possui um vértice e um laço, formando uma conexão em si mesmo. Para $G^1_2$ adiciona-se um 
+		vértice e uma aresta nova (lembrando que há duas possibilidades de conexões: uma em que os vértices 
+		se co-ligam e outra em que possuem um laço cada independente). Segue-se até $G^t_1$, sendo t o 
+		valor dado de número de vértices ligantes. 
 		\vspace{0.3cm}
 
 		\item \begin{minipage}{\linewidth}
 		\centering
 		\includegraphics{Resposta10L3}
 		\end{minipage}
+		
 
 	\end{enumerate}
 \end{document}
